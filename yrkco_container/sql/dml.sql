@@ -12,12 +12,12 @@ INSERT INTO adress (street, postnumber, area, country_id) VALUES
 ('Karl Johans gate 22', '0159', 'Oslo', 2),
 ('Mannerheimintie 45', '00100', 'Helsinki', 3);
 
-INSERT INTO företag (name, orgnr, adress_id) VALUES
+INSERT INTO foretag (name, orgnr, adress_id) VALUES
 ('Tech AB', '556677-1234', 1),
 ('Nordic Solutions AS', '987654-321', 2),
 ('EduConsult Oy', '1234567-9', 3);
 
-INSERT INTO utbildare (firstname, lastname, socialnumber, email, role, företag_id) VALUES
+INSERT INTO utbildare (firstname, lastname, socialnumber, email, role, foretag_id) VALUES
 ('Anna', 'Berg', '850101-1234', 'anna.berg@techab.se', 'Senior Lecturer', 1),
 ('Lars', 'Nilsen', '900215-5678', 'lars.nilsen@nordicsolutions.no', 'Guest Lecturer', 2),
 ('Mia', 'Korhonen', '920301-9876', 'mia.korhonen@educonsult.fi', 'Program Instructor', 3);
@@ -32,7 +32,7 @@ INSERT INTO utbildningsledare (firstname, lastname, socialnumber, email) VALUES
 ('Jonas', 'Andersen', '760923-4567', 'jonas.andersen@yh.se'),
 ('Tiina', 'Virtanen', '830110-9876', 'tiina.virtanen@yh.fi');
 
-INSERT INTO anläggning (ort, adress_id) VALUES
+INSERT INTO anlaggning (ort, adress_id) VALUES
 ('Stockholm', 1),
 ('Oslo', 2),
 ('Helsinki', 3);
