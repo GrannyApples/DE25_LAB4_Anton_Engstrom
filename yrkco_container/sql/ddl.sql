@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS adress (
 );
 
 -- FÖRETAG
-CREATE TABLE IF NOT EXISTS företag (
+CREATE TABLE IF NOT EXISTS foretag (
     id SERIAL PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
     orgnr VARCHAR(50) NOT NULL UNIQUE,
@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS utbildare (
     socialnumber VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(150) NOT NULL,
     role VARCHAR(100),
-    företag_id INT NOT NULL,
-    FOREIGN KEY (företag_id) REFERENCES företag(id)
+    foretag_id INT NOT NULL,
+    FOREIGN KEY (foretag_id) REFERENCES foretag(id)
 );
 
 -- PROGRAM
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS utbildningsledare (
 );
 
 -- ANLÄGGNING
-CREATE TABLE IF NOT EXISTS anläggning (
+CREATE TABLE IF NOT EXISTS anlaggning (
     id SERIAL PRIMARY KEY,
     ort VARCHAR(100) NOT NULL,
     adress_id INT NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS klass (
     start_year INT NOT NULL,
     FOREIGN KEY (program_id) REFERENCES program(id),
     FOREIGN KEY (utbildningsledare_id) REFERENCES utbildningsledare(id),
-    FOREIGN KEY (facility_id) REFERENCES anläggning(id)
+    FOREIGN KEY (facility_id) REFERENCES anlaggning(id)
 );
 
 -- STUDENT
