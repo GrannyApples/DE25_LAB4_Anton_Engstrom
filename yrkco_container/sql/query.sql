@@ -7,4 +7,3 @@ FROM utbildare u
 JOIN foretag f ON u.foretag_id = f.id
 JOIN adress a ON f.adress_id = a.id
 JOIN country c ON a.country_id = c.id;
-
