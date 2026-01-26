@@ -28,4 +28,22 @@ FROM utbildare u
 JOIN kurs_utbildare ku ON u.id = ku.utbildar_id
 JOIN kurs k ON ku.kurs_id = k.id;
 
--- 
+-- Studenter + Klass + Program + Utbildningsledare
+-- complete view over students and their connections
+SELECT s.firstname || ' ' || s.lastname AS student,
+       k.start_year,
+       p.name AS program,
+       ul.firstname || ' ' || ul.lastname AS utbildningsledare
+FROM student s
+JOIN klass k ON s.klass_id = k.id
+JOIN program p ON k.program_id = p.id
+JOIN utbildningsledare ul ON k.utbildningsledare_id = ul.id;
+
+-- just a course count, agg + join
+
+SELECT p.name AS program,
+       COUNT(pk.kurs_id) AS antal_kurser
+FROM program p
+LEFT JOIN programkurs pk ON p.id = pk.program_id
+GROUP BY p.name
+ORDER BY antal_kurser DESC;
