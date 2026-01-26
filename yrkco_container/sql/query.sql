@@ -20,3 +20,12 @@ FROM program p
 JOIN programkurs pk ON p.id = pk.program_id
 JOIN kurs k ON pk.kurs_id = k.id
 WHERE p.name = 'Systemutvecklare .NET';
+
+-- shows teacher + courses they teach
+SELECT u.firstname || ' ' || u.lastname AS utbildare,
+       k.name AS kurs
+FROM utbildare u
+JOIN kurs_utbildare ku ON u.id = ku.utbildar_id
+JOIN kurs k ON ku.kurs_id = k.id;
+
+-- 
