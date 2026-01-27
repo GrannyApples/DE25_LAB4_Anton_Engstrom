@@ -13,7 +13,7 @@ services:
       - postgres_data:/var/lib/postgresql
       - ./sql:/sql
     healthcheck: # define a check after the container is up running
-      test: ["CMD-SHELL","pg_isready -U ${POSTGRES_USER:-postgres}"]
+      test: ["CMD-SHELL","pg_isready -U ${POSTGRES_USER:-yrkco}"]
       interval: 5s
       retries: 5
       timeout: 3s
