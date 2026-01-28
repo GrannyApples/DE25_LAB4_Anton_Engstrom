@@ -27,18 +27,33 @@ Optional: Python for scripts / connections
 
 📁 Project Structure
 yh_labb/
+
  ├─ sql/
- │   ├─ ddl.sql        # Creates tables 
- |   ├─ dml.sql        # Insert seed data
- │   ├─ query.sql       # Example join queries
+ 
+ │   ├─ docker-init.sql        # Creates tables + inserts seed data
+ 
+ │   ├─ test_queries.sql       # Example join queries
+ 
  │
+ 
  ├─ docker/
+ 
  │   ├─ .env                   # PostgreSQL environment variables
+ 
  │   ├─ docker-compose.yml     # Docker services definition
+ 
  │
- | presentation.pdf
+ 
+ ├─ presentation/
+ 
+ │   ├─ uppgift2_presentation.pdf
+ 
+ │   ├─ conceptual_model.png   # Lucidchart export
+ 
  │
+ 
  ├─ README.md
+
 
 🗄️ Database Overview
 
