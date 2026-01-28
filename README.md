@@ -1,3 +1,12 @@
+FAILED CONSTRAINT ORGNR DUPLICATE, CAN ONLY BE UNIQUE MISSED ASSIGNMENT
+
+![alt text](image.png)
+
+
+
+
+
+
 📚 YrkesCo Database Project
 
 This project contains a fully dockerized PostgreSQL database for the fictional vocational school YrkesCo, designed according to modern data modeling principles.
